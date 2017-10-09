@@ -1,9 +1,11 @@
 {
     "scripts": {
-        "build": "webpack --config webpack.prod.js",
-        "start": "webpack-dev-server --open --config webpack.dev.js"
+        "build": "webpack --config webpack.common.js"
     },
     "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.0",
         "clean-webpack-plugin": "^0.1.17",
         "css-loader": "^0.28.7",
         "file-loader": "^1.1.5",

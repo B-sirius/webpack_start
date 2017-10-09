@@ -1,14 +1,12 @@
-function getComponent() {
-    return import ( /* webpackChunkName: "lodash" */ 'lodash').then(_ => {
-        var element = document.createElement('div');
+import _ from 'lodash';
 
-        element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+function component() {
+    var element = document.createElement('div');
 
-        return element;
+    // Lodash, now imported by this script
+    element.innerHTML = _.join(['shut up', 'webpack'], ' ');
 
-    }).catch(error => 'An error occurred while loading the component');
+    return element;
 }
 
-getComponent().then(component => {
-    document.body.appendChild(component);
-})
+document.body.appendChild(component());
